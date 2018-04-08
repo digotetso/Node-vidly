@@ -1,0 +1,3 @@
+{
+    "jwtPrivateKey": "vidly_jwtPrivateKey"  // maps to environment variable named --> vidly_jwtPrivateKey
+}
