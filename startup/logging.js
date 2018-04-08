@@ -1,6 +1,6 @@
 const winston = require('winston')
 require('express-async-errors');
-require('winston-mongodb');
+// require('winston-mongodb');
 
 module.exports = function(){
     // At the moment below helper method can only catch 'unhandledException', workaround to catch 'unhadledRection'@#2
@@ -16,8 +16,8 @@ process.on('unhandledRejection', (ex) => {
 })
 
 winston.add(winston.transports.File, {filename: 'logfile.log'});
-winston.add(winston.transports.MongoDB, {
-    db: 'mongodb://localhost/vidly',
-    level: 'info'
-}) //log to MongoBD
+// winston.add(winston.transports.MongoDB, {
+//     db: 'mongodb://localhost/vidly',
+//     level: 'info'
+// }) //log to MongoBD
 }

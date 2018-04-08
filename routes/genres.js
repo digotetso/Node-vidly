@@ -25,7 +25,6 @@ const { error } = validate(req.body);
 
   if(error) return res.status(400).send(error.details[0].message);
 
-   console.log('name property: ', req.body.name )
    let genre = new Genre({ name: req.body.name });
    genre = await genre.save()
    res.send(genre);             
